@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;500;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Dynapuff";
+}
+body {
+    background-image: url(img/back.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.main {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+.main-cont {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    width: 100%;
+}
+
+.ball {
+    position: absolute;
+
+}
+
+.pokeballs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 40em;
+
+}
+#firstball {
+    display: block;
+    animation: movimiento 0.4s linear 5s 1;
+}
+#ball-2 {
+    display: none;
+    width: 35em;
+    margin: 0;
+    padding: 0;
+    animation: ball2 2s linear infinite;
+}
+@keyframes ball2 {
+    0% {transform: translateY(0);}
+
+    25% {transform: translateY(2%) rotate(2deg);}
+
+    50% {transform: translateY(0%);}
+
+    75% {transform: translateY(2%) rotate(2deg);}
+}
+
+#firstball:hover {
+    animation: movimiento 0.4s linear infinite
+}
+/* cards */
+.cards-hover {
+    position: absolute;
+    top: 25em;
+    right: 55em;
+    filter: drop-shadow(20px 20px 40px);
+    animation: ball2 1s linear infinite;
+
+}
+#card {
+    display: none;
+}
+@keyframes movimiento {
+    0% { transform: translateX(0px)
+         rotate(0deg)}
+    25% { transform: translateX(-15px)
+            rotate(-12deg)}
+    50% { transform: translateX(15px)
+            rotate(12deg)}
+    100%{ transform: translateX(0px)
+        rotate(0deg)}
+}
+.hidden {
+    display: none;
+}
+
+.cards {
+    position: absolute;
+    transition: transform 800ms cubic-bezier(.05,.43,.25,.95);
+}
+.cards:nth-child(1) {
+    transform: translateX(-5%) rotate(-3deg);
+}
+.cards:nth-child(2) {
+    transform:rotate(-1deg);
+}
+.cards:nth-child(3) {
+    transform: translateX(5%) rotate(2deg);
+}
+.cards:nth-child(4) {
+    transform: translateX(10%) rotate(5deg);
+}
+.cards-hover:hover > .cards:nth-child(1){
+    transform: translate(-70%, 15%) rotate(-20deg);
+}
+.cards-hover:hover > .cards:nth-child(2){
+    transform: translate(-35%, 5%) rotate(-10deg);
+}
+.cards-hover:hover > .cards:nth-child(3){
+    transform: translate(35%, 5%) rotate(10deg);
+}
+.cards-hover:hover > .cards:nth-child(4){
+    transform: translate(70%, 15%) rotate(20deg);
+}
+/* left side */
+.left {
+}
+.logo-text {
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5em;
+    color: aliceblue;
+
+}
+.content-left p{
+   width: 40em;
+   font-size: 1.4em;
+   padding: 2em;
+
+}
+.content-left img {
+  width: 800px;
+}
+.content-left h2 {
+    font-size: 2em;
+    text-align: center;
+}
+
+/* nav bar */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(15px);
+    position: absolute;
+    width: 100%;
+}
+.nav-logo img{
+    width: 200px;
+}
+.nav-buttons ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+.nav-buttons ul li a{
+    text-decoration: none;
+    font-size: 1.5em;
+    color: aliceblue;
+    padding: 20px;
+    
+}
+.nav-buttons ul li a:hover {
+    color: red;
+    transition: all ease 0.5s;
+}
